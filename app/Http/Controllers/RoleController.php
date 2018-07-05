@@ -14,7 +14,8 @@ class RoleController extends Controller
      */
     public function index()
     {
-       $roles=\App\role::all();
+      // $roles=\App\role::all();//sab data fetch garna ko lagi 
+        $roles= role::paginate(2);
        return view('back.roles.index',compact('roles'));
     }
 
@@ -54,7 +55,9 @@ class RoleController extends Controller
      */
     public function show($id)
     {
-        //
+       $roles= role::find($id);
+        //return $users;
+        return view ('back.roles.show',compact('roles')); //
     }
 
     /**

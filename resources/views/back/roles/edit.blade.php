@@ -1,4 +1,4 @@
-@extends('front.app');
+@extends('layouts.app');
 @section('content')
 
 <div class="container">
@@ -21,4 +21,5 @@
 			</div>
 		</div>
 		</form>	
-		</div>		
+		</div>	
+		@endsection	

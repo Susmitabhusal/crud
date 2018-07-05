@@ -30,7 +30,7 @@
 	<tr><td>{{$role->id}} </td>
 	<td>{{$role->name}} </td>
 	
-	<td><a href="/role/{{$role->id}}">View</a></td>
+	<td><a href="/role/{{$role->id}}" class="btn btn-success">View</a></td>
 	<td><a href="{{action('RoleController@edit',$role['id'])}}" class="btn btn-warning"> Edit </a></td>
 	<td><form action="{{action('RoleController@destroy',$role['id'])}}" method="post"> 
 	@csrf
@@ -54,6 +54,7 @@ DELETE</button>
 		
 
 </table>
+{{$roles->links()}}
 @endsection
 </div>
 </div>
